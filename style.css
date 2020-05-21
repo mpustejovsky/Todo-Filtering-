@@ -1,0 +1,93 @@
+
+
+@font-face{
+    font-family: elecfont;
+    src: url(./img/electrical.ttf);
+  }
+
+body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "myhead myhead"
+                          "listarea buttonarea";
+    background-color: gray;
+}
+
+.list_holder {
+    grid-area: listarea;
+}
+.button_holder {
+    grid-area: buttonarea;
+    display: flex;
+    flex-direction: column;  
+}
+
+.button_holder input {
+    width: 30px;
+}
+
+header{
+    grid-area: myhead;
+    text-align: center;
+    font-family: elecfont;
+    color: blue;
+    font-size: 40px;
+    background-color: black;
+    height: 100px;
+    padding-top: 25px;
+}
+
+.button_holder button {
+    margin-bottom: 20px;
+    height: 30px;
+}
+.list_holder .top_button {
+    margin-top: 30px;
+}
+.isFalse {
+    color: red;
+    
+}
+
+.isTrue{
+    color: green;
+}
+
+#top_button, #top_button2{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    display: inline;
+}
+#todo-list button {
+    width: 150px;
+    height: 20px;
+    color: white;
+}
+
+#todo-list {
+    background-color: lightgray;
+    width: 90%;
+    height: 600px;
+    overflow: scroll;
+  }
+
+  @media (max-width: 800px) {
+       
+   body{
+    
+    grid-template-columns: 100%;
+    grid-template-areas: "myhead"
+                          "listarea"
+                          "buttonarea"; 
+    }
+    #todo-list {
+        background-color: lightgray;
+        width: 80%;
+        height: 400px;
+        overflow: scroll;
+      }
+    header {
+        font-size: 30px;
+    }
+}

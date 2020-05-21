@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Test Site</title>
+      
+    <link href="https://fonts.googleapis.com/css?family=Akronim|Slabo+27px&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>Mark's ToDo List</header>
+    <div class="button_holder">
+    <p>Step 1: Select User ID for ToDo's, and press submit</p>
+    <label for="TODO_ID">UserID (1-10):</label>
+    <input type="number" id="TODO_ID" name="TODO_ID"
+       min="1" max="10" value="1">
+    <button id="numberof" onclick="fetchTodos()">Submit</button>
+
+    <!-- <button onclick="logTodos()"></button> -->
+    <p>Step 2: Click to show total list, complete list, or incomplete list</p>
+    <button onclick="populateTotalTodos(1)">Total Todos</button>
+    <button onclick="populateTotalTodos(2)">Completed Todos</button>
+    <button onclick="populateTotalTodos(3)">Incompleted Todos</button>
+    <p>Step 3: Click click on "Click When Complete" if you want to updated a task.</p>
+    </div>
+    
+    <div class="list_holder">
+      
+      <p id="top_button2">
+      </p> 
+      <p id="top_button">Which User ID do you want the List for?
+      </p>  
+  
+      <ol id="todo-list">
+      
+    </ol></div>
+  </body>
+</html>
